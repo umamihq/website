@@ -1,0 +1,18 @@
+#root{margin:0 auto;width:100vw}@media (max-width: 768px){#root{width:100%}}/**
+* @license
+*
+* Font Family: Clash Display
+* Designed by: Indian Type Foundry
+* URL: https://www.fontshare.com/fonts/clash-display
+* © 2024 Indian Type Foundry
+*
+* Clash Display Extralight
+* Clash Display Light
+* Clash Display Regular
+* Clash Display Medium
+* Clash Display Semibold
+* Clash Display Bold
+* Clash Display Variable (Variable font)
+
+*
+*/@font-face{font-family:ClashDisplay-Extralight;src:url(/website/assets/ClashDisplay-Extralight-D3i1MCwm.woff2) format("woff2"),url(/website/assets/ClashDisplay-Extralight-BJExDEVH.woff) format("woff"),url(/website/assets/ClashDisplay-Extralight--kv4w5k0.ttf) format("truetype");font-weight:200;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Light;src:url(/website/assets/ClashDisplay-Light-DIjv0-nY.woff2) format("woff2"),url(/website/assets/ClashDisplay-Light-Co9CQZ40.woff) format("woff"),url(/website/assets/ClashDisplay-Light-CutxPsj4.ttf) format("truetype");font-weight:300;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Regular;src:url(/website/assets/ClashDisplay-Regular-DhusH4GR.woff2) format("woff2"),url(/website/assets/ClashDisplay-Regular-BKrzTZUV.woff) format("woff"),url(/website/assets/ClashDisplay-Regular-zoOY6xZw.ttf) format("truetype");font-weight:400;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Medium;src:url(/website/assets/ClashDisplay-Medium-BPdWq--j.woff2) format("woff2"),url(/website/assets/ClashDisplay-Medium-D8oxfInt.woff) format("woff"),url(/website/assets/ClashDisplay-Medium-RwyLHzhI.ttf) format("truetype");font-weight:500;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Semibold;src:url(/website/assets/ClashDisplay-Semibold-DcA1xgJG.woff2) format("woff2"),url(/website/assets/ClashDisplay-Semibold-Cc_zfQ1K.woff) format("woff"),url(/website/assets/ClashDisplay-Semibold-C8tXlykZ.ttf) format("truetype");font-weight:600;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Bold;src:url(/website/assets/ClashDisplay-Bold-YaCnK2PY.woff2) format("woff2"),url(/website/assets/ClashDisplay-Bold-79YOzMqN.woff) format("woff"),url(/website/assets/ClashDisplay-Bold-5hYeFSJJ.ttf) format("truetype");font-weight:700;font-display:swap;font-style:normal}@font-face{font-family:ClashDisplay-Variable;src:url(/website/assets/ClashDisplay-Variable-Buk7cB_f.woff2) format("woff2"),url(/website/assets/ClashDisplay-Variable-Dt2PxZhp.woff) format("woff"),url(/website/assets/ClashDisplay-Variable-BHZjogP3.ttf) format("truetype");font-weight:200 700;font-display:swap;font-style:normal}:root{font-family:ClashDisplay-Variable,system-ui,sans-serif;line-height:1.5;font-weight:400;font-synthesis:none;text-rendering:optimizeLegibility;-moz-osx-font-smoothing:grayscale}button{border-radius:8px;border:1px solid transparent;padding:.6em 1.2em;font-size:1em;font-weight:500;font-family:inherit;background-color:#1a1a1a;cursor:pointer;transition:border-color .25s}button:hover{border-color:#646cff}button:focus,button:focus-visible{outline:4px auto -webkit-focus-ring-color}@media (prefers-color-scheme: light){:root{color:#213547;background-color:#fff}a:hover{color:#747bff}button{background-color:#f9f9f9}}
