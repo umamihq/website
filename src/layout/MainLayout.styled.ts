@@ -23,9 +23,14 @@ export const StyledHeader = styled.header<{ isScrolled: boolean }>`
     left: 0;
     background: ${(props) => props.isScrolled ? '#000000' : '#ffffff'};
     transition: ${(props) => props.isScrolled ? '300ms' : '300ms'};
+    z-index: 3;
+    
+    .umami-logo {
+        display: flex;
+    }
     
     @media ${device.tablet} {
-        padding: ${(props) => props.isScrolled ? '10px 60px' : '35px 0'};;
+        padding: ${(props) => props.isScrolled ? '10px 20px' : '35px 0'};
     }
     
     a {
@@ -36,13 +41,15 @@ export const StyledHeader = styled.header<{ isScrolled: boolean }>`
 export const StyledMain = styled.main`
     display: flex;
     flex: 1;
+    position: relative;
+    z-index: 2;
 `
 
 export const StyledFooter = styled.footer`
     display: flex;
 `
 
-export const StyledNavigation = styled.div`
+export const StyledNavigation = styled.div<{ isScrolled: boolean }>`
     display: flex;
     gap: 24px;
     
@@ -68,7 +75,7 @@ export const StyledNavigation = styled.div`
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: #000;
+        background-color: ${({ isScrolled }) => (isScrolled ? '#ffffff' : '#000000')};
         transform: scaleX(0);
         transform-origin: top left;
         transition: transform 0.3s ease;
@@ -82,7 +89,7 @@ type HamburgerMenuProps = {
 const getBackground = ({ isMenuOpen, isScrolled }: HamburgerMenuProps) => {
     if (isMenuOpen) {
         return `
-            background: #000000;
+            background: #ffffff;
         `
     } else if (isScrolled && !isMenuOpen) {
         return `
@@ -94,6 +101,22 @@ const getBackground = ({ isMenuOpen, isScrolled }: HamburgerMenuProps) => {
     `
 }
 
+const getPositionRight = ({ isScrolled, isMenuOpen }: HamburgerMenuProps) => {
+    if (!isMenuOpen && !isScrolled) {
+        return `
+            right: 0;
+        `
+    } else if (isMenuOpen) {
+        return `
+            right: 20px;
+        `
+    } else if (!isMenuOpen && isScrolled) {
+        return `
+            right: 20px;
+        `
+    }
+}
+
 export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
     display: none;
     justify-content: space-around;
@@ -101,9 +124,11 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
     width: 2rem;
     height: 1.5rem;
     cursor: pointer;
-    position: absolute;
-    right: 20px;
+    position: ${({ isMenuOpen }) => (isMenuOpen ? 'fixed' : 'absolute')};
+    // right: ${({ isMenuOpen }) => (isMenuOpen ? '20px' : '20px')};
+    top: ${({ isMenuOpen }) => (isMenuOpen ? '35px' : 'unset')};
     z-index: 10;
+    ${getPositionRight}
 
     @media ${device.tablet}{
         display: flex;
@@ -114,7 +139,7 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
         height: 2px;
         transform-origin: 1px;
         transition: all 0.3s linear;
-        background-color: ${({ isScrolled, isMenuOpen }) => (isScrolled && isMenuOpen ? '#ffffff' : '#000000')};
+        //background-color: ${({ isScrolled, isMenuOpen }) => (isScrolled && isMenuOpen ? '#ffffff' : '#000000')};
         
         ${getBackground}
     }
@@ -134,22 +159,33 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
 `
 
 export const StyledHamburgerMenuList = styled.div<{ isMenuOpen: boolean }>`
-    display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
+    display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')};
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     inset: 0;
     z-index: 9;
-    background-color: #ffffff;
+    background-color: #000000;
     
+    .umami-logo {
+        display: flex;
+    }
+
     a {
-        color: #000000;
+        color: #ffffff;
     }
 `
 
 export const StyledHamburgerMenuListHeader = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    padding: 35px 0;
+    position: fixed;
+    top: 35px;
+    left: 20px;
+    right: 20%;
+    width: 100%;
 `
 
 export const StyledHamburgerMenuListBody = styled.div`
@@ -159,6 +195,13 @@ export const StyledHamburgerMenuListBody = styled.div`
     padding: 5rem 2rem;
     justify-content: center;
     align-items: center;
+    
+    .respect-content {
+        color: #ffffff;
+        position: absolute;
+        bottom: 40px;
+        font-size: 16px;
+    }
 
     a {
         position: relative;

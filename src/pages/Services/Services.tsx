@@ -85,7 +85,7 @@ const Services = () => {
                         </p>
                     </div>
                 </div>
-                <img src="/curve.svg" alt="curve image"/>
+                <img className="curve-arrow" src="/curve.svg" alt="curve image"/>
             </StyledScheduledButton>
         </StyledPageLayout>
     );

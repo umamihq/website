@@ -18,7 +18,7 @@ export const StyledButton = styled.button`
     
     @media ${device.tablet} {
         min-width: auto;
-        font-size: 22px;
+        font-size: 18px;
     }
     
     &:hover {

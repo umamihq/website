@@ -17,6 +17,19 @@ type HamburgerMenuProps = {
     isScrolled: boolean
 }
 
+const ScrollTop = () => {
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+        const currentScroll = window.scrollY
+        if (currentScroll > 60) {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+    }, [pathname])
+
+    return null
+}
+
 const HamburgerMenu: FC<HamburgerMenuProps> = ({ isScrolled }) => {
     const [isMenuOpen, setOpen] = useState<boolean>(false)
 
@@ -30,23 +43,30 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ isScrolled }) => {
 
     return (
         <>
-            <StyledHamburgerMenu isMenuOpen={isMenuOpen} isScrolled={isScrolled} onClick={handleMenuCLick}>
+            <StyledHamburgerMenu
+                className="StyledHamburgerMenu"
+                onClick={handleMenuCLick}
+                isMenuOpen={isMenuOpen}
+                isScrolled={isScrolled}
+            >
                 <div className="burger-item item-1" />
                 <div className="burger-item item-2" />
                 <div className="burger-item item-3" />
                 <div className="burger-item item-4" />
             </StyledHamburgerMenu>
 
-            <StyledHamburgerMenuList isMenuOpen={isMenuOpen}>
+            <StyledHamburgerMenuList className="StyledHamburgerMenuList" isMenuOpen={isMenuOpen}>
                 <StyledHamburgerMenuListHeader className="StyledHamburgerMenuListHeader">
-                    <NavLink onClick={handleLink} to="/">
-                        <img src="/umami.svg" alt="umami logo"/>
+                    <NavLink className="umami-logo" onClick={handleLink} to="/">
+                        <img src="/umami_white_logo.svg" alt="umami logo"/>
                     </NavLink>
                 </StyledHamburgerMenuListHeader>
 
-                <StyledHamburgerMenuListBody>
-                    <NavLink onClick={handleLink} to="/services" >Services</NavLink>
-                    <NavLink onClick={handleLink} to="/about" >About</NavLink>
+                <StyledHamburgerMenuListBody className="StyledHamburgerMenuListBody">
+                    <NavLink onClick={handleLink} to="/services">Services</NavLink>
+                    <NavLink onClick={handleLink} to="/about">About</NavLink>
+
+                    <div className="respect-content">Give respect and get it back.</div>
                 </StyledHamburgerMenuListBody>
             </StyledHamburgerMenuList>
         </>
@@ -78,13 +98,14 @@ const MainLayout = () => {
 
     return (
         <StyledMainLayout className="StyledMainLayout">
+            <ScrollTop />
             <StyledHeader className="StyledHeader" isScrolled={isScrolled}>
                 <div className="logo-container">
-                    <NavLink to="/">
+                    <NavLink className="umami-logo" to="/">
                         <img src={logoImage} alt="umami logo" />
                     </NavLink>
                 </div>
-                <StyledNavigation className="StyledNavigation">
+                <StyledNavigation className="StyledNavigation" isScrolled={isScrolled}>
                     <NavLink to="/services" >Services</NavLink>
                     <NavLink to="/about" >About</NavLink>
                 </StyledNavigation>

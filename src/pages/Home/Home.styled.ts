@@ -41,12 +41,12 @@ export const StyledHomeContainer = styled.div`
         letter-spacing: 2px;
     }
     
-    .side-box-pink,
-    .side-box-green {
-        @media ${device.tablet} {
-            display: none;
-        }
-    }
+    // .side-box-pink,
+    // .side-box-green {
+    //     @media ${device.tablet} {
+    //         display: none;
+    //     }
+    // }
     
     .side-box-pink {
         background: #F3A5BB;
@@ -55,6 +55,11 @@ export const StyledHomeContainer = styled.div`
         position: absolute;
         bottom: 100px;
         right: 0;
+
+        @media ${device.tablet} {
+            width: 100px;
+            right: -20px;
+        }
     }
     
     .side-box-green {
@@ -64,6 +69,13 @@ export const StyledHomeContainer = styled.div`
         position: absolute;
         bottom: 0;
         left: 0;
+
+        @media ${device.tablet} {
+            width: 150px;
+            height: 50px;
+            left: -20px;
+            bottom: 80px;
+        }
     }
 `
 

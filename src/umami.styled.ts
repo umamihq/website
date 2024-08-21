@@ -19,9 +19,9 @@ export const UmamiStyled = createGlobalStyle`
         margin-bottom: 30px;
         
         @media ${device.tablet} {
-            font-size: 42px;
-            line-height: 47px;
-            letter-spacing: 5px;
+            font-size: 34px;
+            line-height: 40px;
+            letter-spacing: 4px;
         }
     }
     
@@ -33,9 +33,9 @@ export const UmamiStyled = createGlobalStyle`
         text-transform: uppercase;
 
         @media ${device.tablet} {
-            font-size: 26px;
-            line-height: 47px;
-            letter-spacing: 5px;
+            font-size: 21px;
+            line-height: 38px;
+            letter-spacing: 4px;
         }
     }
     
@@ -47,8 +47,9 @@ export const UmamiStyled = createGlobalStyle`
         margin: 0;
         
         @media ${device.tablet} {
-            font-size: 22px;
-            line-height: 30px;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 1px;
         }
     }
 
@@ -75,8 +76,8 @@ export const UmamiStyled = createGlobalStyle`
         letter-spacing: 2px;
 
         @media ${device.tablet} {
-            font-size: 28px;
-            line-height: 40px;
+            font-size: 22px;
+            line-height: 32px;
         }
     }
     
@@ -117,7 +118,7 @@ export const UmamiStyled = createGlobalStyle`
             line-height: 50px;
             
             @media ${device.tablet} {
-                line-height: 40px;
+                line-height: 32px;
             }
         }
     }
@@ -139,6 +140,8 @@ export const UmamiStyled = createGlobalStyle`
         
         @media ${device.tablet} {
             flex-direction: column;
+            gap: 50px;
+            margin: 50px 0;
         }
         
         .right-content {
@@ -204,11 +207,11 @@ export const UmamiStyled = createGlobalStyle`
         margin-top: 160px;
 
         @media ${device.tablet} {
-            margin-top: 100px;
+            margin-top: 50px;
         }
         
         h2 {
-            margin: 0 0 70px 0;
+            margin: 0 0 50px 0;
         }
     }
     
@@ -218,6 +221,7 @@ export const UmamiStyled = createGlobalStyle`
         
         @media ${device.tablet} {
             flex-direction: column;
+            gap: 20px;
         }
     }
     
@@ -260,7 +264,11 @@ export const StyledScheduledButton = styled.div`
         flex-direction: column;
         justify-content: center;
         gap: 50px;
-        margin: 100px 0;
+        margin: 50px 0;
+        
+        img {
+            display: none;
+        }
     }
     
     .button-container {
@@ -309,7 +317,17 @@ export const StyledFooter = styled.div`
     padding: 40px 60px;
     height: 320px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;position: relative;
+    z-index: 2;
+    
+    @media ${device.tablet} {
+        gap: 50px;
+        height: auto;
+    }
+    
+    .footer-top {
+        gap: 50px
+    }
     
     .footer-bottom {
         margin-top: auto;
