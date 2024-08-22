@@ -1,4 +1,5 @@
 import Button from '../../components/Button'
+import Seo from "../../components/Seo";
 import {StyledHomeContainer, StyledHomeFooter} from './Home.styled.ts'
 
 const Home = () => {
@@ -8,6 +9,12 @@ const Home = () => {
 
     return (
         <StyledHomeContainer className="StyledHomeContainer">
+            <Seo
+                title=" UMAMI | Digital Innovation & Product Consultancy"
+                description="We work with founders and business leaders to make the right technology decisions to be able to stay ahead of the innovation curve."
+                type="article"
+                name="Umamihq"
+            />
             <div className="intro-section">
                 <h1 className="home-title">EARLY STAGE DIGITAL<br/> PRODUCT CONSULTANCY </h1>
                 <div className="home-description">Strategies for Digital Innovation and Risk Reduction</div>

@@ -1,4 +1,5 @@
 import Button from "../../components/Button";
+import Seo from "../../components/Seo";
 import {StyledPageLayout, StyledScheduledButton} from "../../umami.styled.ts";
 
 const About = () => {
@@ -8,6 +9,12 @@ const About = () => {
 
     return (
         <StyledPageLayout className="StyledPageLayout">
+            <Seo
+                title="UMAMI | Who We Are"
+                description="Learn whom we’ve helped and with who we collaborate on bringing innovation."
+                type="article"
+                name="Umamihq"
+            />
             <h1>About</h1>
             <p>We help you leverage technology to your advantage.</p>
 
