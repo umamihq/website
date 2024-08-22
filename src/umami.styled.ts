@@ -32,6 +32,12 @@ export const UmamiStyled = createGlobalStyle`
         letter-spacing: 2px;
         text-transform: uppercase;
 
+        @media ${device.laptop} {
+            font-size: 52px;
+            line-height: 57px;
+            letter-spacing: 2px;
+        }
+
         @media ${device.tablet} {
             font-size: 21px;
             line-height: 38px;
