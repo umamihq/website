@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import MainLayout from "./layout";
+import NotFound from "./pages/NotFound";
 import {UmamiStyled} from "./umami.styled.ts";
 
 // const theme = {
@@ -35,6 +36,10 @@ function App() {
                     path: 'about',
                     element: <About />
                 },
+                {
+                    path: '*',
+                    element: <NotFound />
+                }
             ]
         },
     ])

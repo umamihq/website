@@ -136,7 +136,7 @@ const MainLayout = () => {
                         <img src="/umami_white_logo.svg" alt="umami logo"/>
                         <div className="footer-copyright-section">
                             <a className="email" href="mailtp:theumamihq@gmail.com ">theumamihq@gmail.com</a>
-                            <p>© 2024 Umami Digital Consulting. All rights reserved.</p>
+                            <p className="copy-content">© 2024 Umami Digital Consulting. All rights reserved.</p>
                         </div>
                     </div>
                 </StyledFooter>

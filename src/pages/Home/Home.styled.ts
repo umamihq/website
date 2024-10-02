@@ -14,6 +14,13 @@ export const StyledHomeContainer = styled.div`
     
     @media ${device.tablet} {
         gap: 50px;
+        text-align: left;
+    }
+
+    .home-title {
+        @media ${device.tablet} {
+            padding: 0 25px;
+        }
     }
     
     .home-description {
@@ -21,6 +28,13 @@ export const StyledHomeContainer = styled.div`
         font-size: 24px;
         letter-spacing: 5px;
         font-weight: 200;
+        
+        @media ${device.tablet} {
+            background: #F3A5BB;
+            font-size: 18px;
+            padding: 25px;
+            font-weight: 300;
+        }
     }
     
     .action-section {
@@ -31,22 +45,38 @@ export const StyledHomeContainer = styled.div`
         z-index: 2;
         
         @media ${device.tablet} {
+            display: flex;
+            margin: 0;
             width: 100%;
-            margin: 0 10px;
+
+            .action-button {
+                padding: 0 25px;
+                button {
+                    width: 100%;
+                }
+            }
         }
     }
     
     .action-description {
         font-size: 16px;
         letter-spacing: 2px;
+        
+        @media ${device.tablet} {
+            font-size: 12px;
+            line-height: 15px;
+            text-align: center;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
     }
     
-    // .side-box-pink,
-    // .side-box-green {
-    //     @media ${device.tablet} {
-    //         display: none;
-    //     }
-    // }
+    .side-box-pink,
+    .side-box-green {
+        @media ${device.tablet} {
+            display: none;
+        }
+    }
     
     .side-box-pink {
         background: #F3A5BB;
@@ -85,6 +115,10 @@ export const StyledHomeFooter = styled.div`
     margin-bottom: 10px;
     position: absolute;
     bottom: 0;
+    
+    @media ${device.tablet} {
+        display: none;
+    }
     
     .home-footer-text {
         margin-top: auto;

@@ -7,7 +7,8 @@ export const StyledMainLayout = styled.div`
     min-height: 100vh;
     
     @media ${device.tablet} {
-        padding: 0 20px;
+        padding: 0;
+        min-height: 100%;
     }
 `
 
@@ -30,7 +31,7 @@ export const StyledHeader = styled.header<{ isScrolled: boolean }>`
     }
     
     @media ${device.tablet} {
-        padding: ${(props) => props.isScrolled ? '10px 20px' : '35px 0'};
+        padding: ${(props) => props.isScrolled ? '10px 20px' : '35px 25px'};
     }
     
     a {
@@ -43,6 +44,10 @@ export const StyledMain = styled.main`
     flex: 1;
     position: relative;
     z-index: 2;
+    
+    @media ${device.tablet} {
+        flex: inherit;
+    }
 `
 
 export const StyledFooter = styled.footer`
@@ -132,6 +137,7 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
 
     @media ${device.tablet}{
         display: flex;
+        right: 25px;
     }
 
     .burger-item {

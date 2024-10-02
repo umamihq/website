@@ -1,6 +1,6 @@
 import Button from "../../components/Button";
 import Seo from "../../components/Seo";
-import {StyledPageLayout, StyledScheduledButton} from "../../umami.styled.ts";
+import {StyledPageDescription, StyledPageLayout, StyledPageTitle, StyledScheduledButton} from "../../umami.styled.ts";
 
 const About = () => {
     const handleMeeting = () => {
@@ -15,8 +15,8 @@ const About = () => {
                 type="article"
                 name="Umamihq"
             />
-            <h1>About</h1>
-            <p>We help you leverage technology to your advantage.</p>
+            <StyledPageTitle className="StyledPageTitle">About</StyledPageTitle>
+            <StyledPageDescription className="StyledPageDescription">We help you leverage technology to your advantage.</StyledPageDescription>
 
             <div className="pink-box work-section">
                 <h2>WE worked for</h2>

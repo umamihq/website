@@ -8,6 +8,10 @@ export const UmamiStyled = createGlobalStyle`
         /*place-items: center;*/
         min-width: 320px;
         min-height: 100vh;
+        
+        @media ${device.tablet} {
+            min-height: 100%;
+        }
     }
     
     h1 {
@@ -19,7 +23,7 @@ export const UmamiStyled = createGlobalStyle`
         margin-bottom: 30px;
         
         @media ${device.tablet} {
-            font-size: 34px;
+            font-size: 36px;
             line-height: 40px;
             letter-spacing: 4px;
         }
@@ -93,6 +97,14 @@ export const UmamiStyled = createGlobalStyle`
         line-height: 37px;
         letter-spacing: 2px;
         color: rgba(0, 0, 0, 0.25);
+        
+        @media ${device.tablet} {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 1px;
+            display: flex;
+            margin: 10px 0;
+        }
     }
     
     .central-box {
@@ -101,6 +113,10 @@ export const UmamiStyled = createGlobalStyle`
         flex-direction: column;
         justify-content: center;
         margin: 30px auto 130px auto;
+        
+        @media ${device.tablet} {
+            margin: 30px auto 50px auto;
+        }
     }
     
     .green-box {
@@ -108,7 +124,8 @@ export const UmamiStyled = createGlobalStyle`
         padding: 80px 170px;
         
         @media ${device.tablet} {
-            padding: 50px 40px;
+            //padding: 50px 40px;
+            padding: 50px 25px;
         }
         
         h2 {
@@ -134,7 +151,8 @@ export const UmamiStyled = createGlobalStyle`
         padding: 230px 120px;
 
         @media ${device.tablet} {
-            padding: 50px 40px;
+            //padding: 50px 40px;
+            padding: 50px 25px;
         }
     }
     
@@ -157,6 +175,8 @@ export const UmamiStyled = createGlobalStyle`
             @media ${device.tablet} {
                 width: 100%;
                 text-align: center;
+                margin: 0 25px;
+                line-height: 24px
             }
         }
     }
@@ -200,6 +220,11 @@ export const UmamiStyled = createGlobalStyle`
     .help-note {
         margin: 15px 0;
         text-align: center;
+        
+        @media ${device.tablet} {
+            margin: 15px 25px;
+            font-size: 12px;
+        }
     }
     
     .services-item {
@@ -329,6 +354,7 @@ export const StyledFooter = styled.div`
     @media ${device.tablet} {
         gap: 50px;
         height: auto;
+        padding: 40px 25px;
     }
     
     .footer-top {
@@ -342,6 +368,11 @@ export const StyledFooter = styled.div`
     .link-section {
         display: flex;
         gap: 65px;
+        
+        @media ${device.tablet} {
+            width: 100%;
+            justify-content: space-between;
+        }
     }
     
     .link-section__list {
@@ -366,6 +397,10 @@ export const StyledFooter = styled.div`
         @media ${device.tablet} {
             justify-content: left;
             align-items: flex-start;
+
+            p {
+                font-size: 11px;
+            }
         }
     }
     
@@ -395,5 +430,17 @@ export const StyledFooter = styled.div`
         transform: scaleX(0);
         transform-origin: top left;
         transition: transform 0.3s ease;
+    }
+`
+
+export const StyledPageTitle = styled('h1')`
+    @media ${device.tablet} {
+        margin: 30px 25px;
+    }
+`
+
+export const StyledPageDescription = styled('p')`
+    @media ${device.tablet} {
+        margin: 0 25px;
     }
 `

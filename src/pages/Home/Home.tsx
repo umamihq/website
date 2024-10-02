@@ -20,7 +20,9 @@ const Home = () => {
                 <div className="home-description">Strategies for Digital Innovation and Risk Reduction</div>
             </div>
             <div className="action-section">
-                <Button handleButtonClick={handleMeeting}>Schedule a meeting</Button>
+                <div className="action-button">
+                    <Button handleButtonClick={handleMeeting}>Schedule a meeting</Button>
+                </div>
                 <div className="action-description">Let’s chat for 30 minutes about your ideas.<br/>It’s free and there’s no obligation.</div>
             </div>
             <div className="side-box-pink" />
