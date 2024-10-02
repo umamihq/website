@@ -766,7 +766,8 @@ object-assign
     }
     
     .item-1 {
-        transform: ${({isMenuOpen:e})=>e?"rotate(35deg)":"rotate(0)"};
+        transform: ${({isMenuOpen:e})=>e?"rotate(45deg)":"rotate(0)"};
+        width: ${({isMenuOpen:e})=>e?"28px":"35px"};
     }
 
     .item-2,
@@ -775,7 +776,8 @@ object-assign
     }
 
     .item-4 {
-        transform: ${({isMenuOpen:e})=>e?"rotate(-35deg)":"rotate(0)"};
+        transform: ${({isMenuOpen:e})=>e?"rotate(-45deg)":"rotate(0)"};
+        width: ${({isMenuOpen:e})=>e?"28px":"35px"};
     }
 `,px=Ie.div`
     display: ${({isMenuOpen:e})=>e?"flex":"none"};
@@ -800,7 +802,7 @@ object-assign
     align-items: center;
     position: fixed;
     top: 35px;
-    left: 20px;
+    left: 25px;
     right: 20%;
     width: 100%;
 `,mx=Ie.div`
@@ -841,7 +843,7 @@ object-assign
         transform-origin: top left;
         transition: transform 0.3s ease;
     }
-`,gx=()=>{const{pathname:e}=ar();return N.useEffect(()=>{window.scrollY>60&&window.scrollTo({top:0,behavior:"smooth"})},[e]),null},vx=({isScrolled:e})=>{const[t,n]=N.useState(!1),r=()=>{n(!t)},i=()=>{n(!1)};return w.jsxs(w.Fragment,{children:[w.jsxs(dx,{className:"StyledHamburgerMenu",onClick:r,isMenuOpen:t,isScrolled:e,children:[w.jsx("div",{className:"burger-item item-1"}),w.jsx("div",{className:"burger-item item-2"}),w.jsx("div",{className:"burger-item item-3"}),w.jsx("div",{className:"burger-item item-4"})]}),w.jsxs(px,{className:"StyledHamburgerMenuList",isMenuOpen:t,children:[w.jsx(hx,{className:"StyledHamburgerMenuListHeader",children:w.jsx(zr,{className:"umami-logo",onClick:i,to:"/",children:w.jsx("img",{src:"/umami_white_logo.svg",alt:"umami logo"})})}),w.jsxs(mx,{className:"StyledHamburgerMenuListBody",children:[w.jsx(zr,{onClick:i,to:"/services",children:"Services"}),w.jsx(zr,{onClick:i,to:"/about",children:"About"}),w.jsx("div",{className:"respect-content",children:"Give respect and get it back."})]})]})]})},yx=()=>{const e=ar(),[t,n]=N.useState(!1);N.useEffect(()=>{const i=()=>{window.scrollY>0?n(!0):n(!1)};return window.addEventListener("scroll",i),()=>{window.removeEventListener("scroll",i)}},[]);const r=t?"/umami_white_logo.svg":"/umami.svg";return w.jsxs(lx,{className:"StyledMainLayout",children:[w.jsx(gx,{}),w.jsxs(ax,{className:"StyledHeader",isScrolled:t,children:[w.jsx("div",{className:"logo-container",children:w.jsx(zr,{className:"umami-logo",to:"/",children:w.jsx("img",{src:r,alt:"umami logo"})})}),w.jsxs(ux,{className:"StyledNavigation",isScrolled:t,children:[w.jsx(zr,{to:"/services",children:"Services"}),w.jsx(zr,{to:"/about",children:"About"})]}),w.jsx(vx,{isScrolled:t})]}),w.jsx(sx,{className:"StyledMain",children:w.jsx(O0,{})}),!["/"].includes(e.pathname)&&w.jsxs(rx,{className:"StyledFooter",children:[w.jsxs("div",{className:"flex-space-between footer-top",children:[w.jsxs("div",{className:"link-section",children:[w.jsxs("div",{className:"link-section__list",children:[w.jsx("a",{href:"/",children:"Home"}),w.jsx("a",{href:"/services",children:"Services"}),w.jsx("a",{href:"/about",children:"About"})]}),w.jsxs("div",{className:"link-section__list",children:[w.jsx("a",{href:"/",children:"Linkedin"}),w.jsx("a",{href:"/Instagram",children:"Instagram"})]})]}),w.jsx("p",{children:"Give respect and get it back."})]}),w.jsxs("div",{className:"flex-space-between footer-bottom",children:[w.jsx("img",{src:"/umami_white_logo.svg",alt:"umami logo"}),w.jsxs("div",{className:"footer-copyright-section",children:[w.jsx("a",{className:"email",href:"mailtp:theumamihq@gmail.com ",children:"theumamihq@gmail.com"}),w.jsx("p",{className:"copy-content",children:"© 2024 Umami Digital Consulting. All rights reserved."})]})]})]})]})},wx=Ie.div`
+`,gx=()=>{const{pathname:e}=ar();return N.useEffect(()=>{window.scrollY>60&&window.scrollTo({top:0,behavior:"smooth"})},[e]),null},vx=({isScrolled:e})=>{const[t,n]=N.useState(!1),r=()=>{n(!t)},i=()=>{n(!1)};return w.jsxs(w.Fragment,{children:[w.jsxs(dx,{className:"StyledHamburgerMenu",onClick:r,isMenuOpen:t,isScrolled:e,children:[w.jsx("div",{className:"burger-item item-1"}),w.jsx("div",{className:"burger-item item-2"}),w.jsx("div",{className:"burger-item item-3"}),w.jsx("div",{className:"burger-item item-4"})]}),w.jsxs(px,{className:"StyledHamburgerMenuList",isMenuOpen:t,children:[w.jsx(hx,{className:"StyledHamburgerMenuListHeader",children:w.jsx(zr,{className:"umami-logo",onClick:i,to:"/",children:w.jsx("img",{src:"/umami_white_logo.svg",alt:"umami logo"})})}),w.jsxs(mx,{className:"StyledHamburgerMenuListBody",children:[w.jsx(zr,{onClick:i,to:"/services",children:"Services"}),w.jsx(zr,{onClick:i,to:"/about",children:"About"}),w.jsx("div",{className:"respect-content",children:"Give respect and get it back."})]})]})]})},yx=()=>{const e=ar(),t=e.pathname.includes("/"),[n,r]=N.useState(!1);N.useEffect(()=>{if(!t){const o=()=>{window.scrollY>0?r(!0):r(!1)};return window.addEventListener("scroll",o),()=>{window.removeEventListener("scroll",o)}}},[]);const i=n?"/umami_white_logo.svg":"/umami.svg";return w.jsxs(lx,{className:"StyledMainLayout",children:[w.jsx(gx,{}),w.jsxs(ax,{className:"StyledHeader",isScrolled:n,children:[w.jsx("div",{className:"logo-container",children:w.jsx(zr,{className:"umami-logo",to:"/",children:w.jsx("img",{src:i,alt:"umami logo"})})}),w.jsxs(ux,{className:"StyledNavigation",isScrolled:n,children:[w.jsx(zr,{to:"/services",children:"Services"}),w.jsx(zr,{to:"/about",children:"About"})]}),w.jsx(vx,{isScrolled:n})]}),w.jsx(sx,{className:"StyledMain",children:w.jsx(O0,{})}),!["/"].includes(e.pathname)&&w.jsxs(rx,{className:"StyledFooter",children:[w.jsxs("div",{className:"flex-space-between footer-top",children:[w.jsxs("div",{className:"link-section",children:[w.jsxs("div",{className:"link-section__list",children:[w.jsx("a",{href:"/",children:"Home"}),w.jsx("a",{href:"/services",children:"Services"}),w.jsx("a",{href:"/about",children:"About"})]}),w.jsxs("div",{className:"link-section__list",children:[w.jsx("a",{href:"/",children:"Linkedin"}),w.jsx("a",{href:"/Instagram",children:"Instagram"})]})]}),w.jsx("p",{children:"Give respect and get it back."})]}),w.jsxs("div",{className:"flex-space-between footer-bottom",children:[w.jsx("img",{src:"/umami_white_logo.svg",alt:"umami logo"}),w.jsxs("div",{className:"footer-copyright-section",children:[w.jsx("a",{className:"email",href:"mailtp:theumamihq@gmail.com ",children:"theumamihq@gmail.com"}),w.jsx("p",{className:"copy-content",children:"© 2024 Umami Digital Consulting. All rights reserved."})]})]})]})]})},wx=Ie.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
