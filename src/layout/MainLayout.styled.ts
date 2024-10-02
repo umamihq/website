@@ -151,7 +151,8 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
     }
     
     .item-1 {
-        transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(35deg)' : 'rotate(0)')};
+        transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(45deg)' : 'rotate(0)')};
+        width: ${({ isMenuOpen }) => (isMenuOpen ? '28px' : '35px')};
     }
 
     .item-2,
@@ -160,7 +161,8 @@ export const StyledHamburgerMenu = styled.div<HamburgerMenuProps>`
     }
 
     .item-4 {
-        transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-35deg)' : 'rotate(0)')};
+        transform: ${({ isMenuOpen }) => (isMenuOpen ? 'rotate(-45deg)' : 'rotate(0)')};
+        width: ${({ isMenuOpen }) => (isMenuOpen ? '28px' : '35px')};
     }
 `
 
@@ -189,7 +191,7 @@ export const StyledHamburgerMenuListHeader = styled.div`
     align-items: center;
     position: fixed;
     top: 35px;
-    left: 20px;
+    left: 25px;
     right: 20%;
     width: 100%;
 `

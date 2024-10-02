@@ -75,23 +75,26 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ isScrolled }) => {
 
 const MainLayout = () => {
     const location = useLocation()
+    const isHomePage = location.pathname.includes('/')
 
     const [isScrolled, setIsScrolled] = useState(false);
 
     // Handle scroll event
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+        if (!isHomePage) {
+            const handleScroll = () => {
+                if (window.scrollY > 0) {
+                    setIsScrolled(true);
+                } else {
+                    setIsScrolled(false);
+                }
+            };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
+            window.addEventListener('scroll', handleScroll);
+            return () => {
+                window.removeEventListener('scroll', handleScroll);
+            };
+        }
     }, []);
 
     const logoImage = isScrolled ? '/umami_white_logo.svg' : '/umami.svg'
