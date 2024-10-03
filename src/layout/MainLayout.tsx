@@ -75,7 +75,7 @@ const HamburgerMenu: FC<HamburgerMenuProps> = ({ isScrolled }) => {
 
 const MainLayout = () => {
     const location = useLocation()
-    const isHomePage = location.pathname.includes('/')
+    const isHomePage = !['/services', '/about'].includes(location.pathname)
 
     const [isScrolled, setIsScrolled] = useState(false);
 

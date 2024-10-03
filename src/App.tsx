@@ -1,9 +1,9 @@
 import './App.css'
 import {
     // createBrowserRouter,
+    // RouterProvider,
     HashRouter,
     Route,
-    // RouterProvider,
     Routes,
 } from "react-router-dom";
 import Home from "./pages/Home";
@@ -51,18 +51,22 @@ function App() {
     // ])
 
   return (
-      <HashRouter>
+      <>
+
           <UmamiStyled />
           {/*<RouterProvider router={router} />*/}
-          <Routes>
-              <Route path="/" element={<MainLayout />}>
-                  <Route path="/" element={<Home />} />
-                  <Route path="services" element={<Services />} />
-                  <Route path="about" element={<About />} />
-                  <Route path="*" element={<NotFound />} />
-              </Route>
-          </Routes>
-      </HashRouter>
+          <HashRouter>
+              <UmamiStyled />
+              <Routes>
+                  <Route path="/" element={<MainLayout />}>
+                      <Route path="/" element={<Home />} />
+                      <Route path="services" element={<Services />} />
+                      <Route path="about" element={<About />} />
+                      <Route path="*" element={<NotFound />} />
+                  </Route>
+              </Routes>
+          </HashRouter>
+      </>
   )
 }
 
