@@ -19,7 +19,6 @@ const Seo: FC<SeoProps> = ({ title, description, type, name }) => {
             <meta property="og:type" content={type}/>
             <meta property="og:title" content={title}/>
             <meta property="og:description" content={description}/>
-            <meta property="og:image" content="https://umamihq.com/og-image.jpeg"/>
 
             { /* Twitter tags */}
             <meta name="twitter:creator" content={name}/>
