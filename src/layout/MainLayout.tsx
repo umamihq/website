@@ -124,14 +124,14 @@ const MainLayout = () => {
                     <div className="flex-space-between footer-top">
                         <div className="link-section">
                             <div className="link-section__list">
-                                <a href="/">Home</a>
-                                <a href="/services">Services</a>
-                                <a href="/about">About</a>
+                                <NavLink to="/">Home</NavLink>
+                                <NavLink to="/services">Services</NavLink>
+                                <NavLink to="/about">About</NavLink>
                             </div>
-                            <div className="link-section__list">
-                                <a href="/">Linkedin</a>
-                                <a href="/Instagram">Instagram</a>
-                            </div>
+                            {/*<div className="link-section__list">*/}
+                            {/*    <a href="/">Linkedin</a>*/}
+                            {/*    <a href="/Instagram">Instagram</a>*/}
+                            {/*</div>*/}
                         </div>
                         <p>Give respect and get it back.</p>
                     </div>
