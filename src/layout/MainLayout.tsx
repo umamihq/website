@@ -79,6 +79,7 @@ const MainLayout = () => {
 
     const [isScrolled, setIsScrolled] = useState(false);
 
+    // Handle scroll event
     useEffect(() => {
         if (!isHomePage) {
             const handleScroll = () => {
