@@ -119,6 +119,10 @@ export const UmamiStyled = createGlobalStyle`
         }
     }
     
+    .bold {
+        font-weight: 500;
+    }
+    
     .green-box {
         background: #61BF9C;
         padding: 80px 170px;

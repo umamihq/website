@@ -24,9 +24,9 @@ export const StyledHomeContainer = styled.div`
     }
     
     .home-description {
-        text-transform: uppercase;
+        text-transform: lowercase;
         font-size: 24px;
-        letter-spacing: 5px;
+        letter-spacing: 10px;
         font-weight: 200;
         
         @media ${device.tablet} {

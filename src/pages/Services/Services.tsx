@@ -30,12 +30,12 @@ const Services = () => {
 
             <div className="green-box">
                 <h2>WHAT WE DO</h2>
-                <p>Identify technology challenges and goals.</p>
-                <p>Define the product. Set a budget.</p>
-                <p>Design a goal-driven experience. Create a strong, impactful interface. Build a testable prototype.</p>
-                <p>Organize the process and set the baseline for product delivery.</p>
-                <p>Help assemble a team of motivated specialists to deliver. Keep and manage the delivery teams in line with expectations, budget and timeframe.</p>
-                <p>Most importantly. Help decision-makers reduce risk and navigate the digital product development process effectively.</p>
+                <p>Identify <span className="bold">technology challenges</span> and goals.</p>
+                <p><span className="bold">Define the product</span>. Set a <span className="bold">budget</span>.</p>
+                <p>Design a goal-driven experience. Create a strong, impactful interface. Build a <span className="bold">testable prototype</span>.</p>
+                <p>Organize the process and set the <span className="bold">baseline for product delivery</span>.</p>
+                <p>Help <span className="bold">assemble a team</span> of motivated specialists to deliver. Keep and manage the delivery teams in line with expectations, budget and timeframe.</p>
+                <p>Most importantly. Help decision-makers <span className="bold">reduce risk</span> and navigate the <span className="bold">digital product development</span> process effectively.</p>
             </div>
 
             <div className="space-between-box">
@@ -53,7 +53,6 @@ const Services = () => {
                             <li>standard consultations: $900</li>
                             <li>extended consultations: $1400</li>
                         </ul>
-                        <span className="remark">*timeline from 1 week to 8 weeks</span>
                     </div>
                 </div>
                 <div className="flex-space-between services-item">
@@ -61,20 +60,21 @@ const Services = () => {
                     <div className="services-costs__list">
                         <ul>
                             <li>cost estimation workshop: $1800</li>
-                            <li>basic product scoping: $2400</li>
+                            <li>basic product discovery: $2400</li>
                             <li>full workshop + prototype: $5200</li>
                         </ul>
                         <span className="remark">*prices starting from depending on complexity</span>
                     </div>
                 </div>
                 <div className="flex-space-between services-item">
-                    <h2 className="services-heading">Fractional Innovation Manager</h2>
+                    <h2 className="services-heading">Fractional Innovation Management</h2>
                     <div className="services-costs__list">
                         <ul>
                             <li>3 months: $6000-10000</li>
-                            <li>6 months:  $12000-18000</li>
-                            <li>year: $24-36000</li>
+                            <li>6 months: $12000-18000</li>
+                            <li>whole year: $24000-36000</li>
                         </ul>
+                        <span className="remark">*price ranges depend on complexity</span>
                     </div>
                 </div>
             </div>
