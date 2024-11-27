@@ -36,7 +36,7 @@ export const UmamiStyled = createGlobalStyle`
         letter-spacing: 2px;
         text-transform: uppercase;
 
-        @media ${device.laptop} {
+        @media ${device.laptopM} {
             font-size: 52px;
             line-height: 57px;
             letter-spacing: 2px;
@@ -153,6 +153,12 @@ export const UmamiStyled = createGlobalStyle`
     .pink-box {
         background: #F5B7C9;
         padding: 230px 120px;
+        
+        @media ${device.laptop} {
+            .services-item {
+                flex-direction: column;
+            }
+        }
 
         @media ${device.tablet} {
             //padding: 50px 40px;
@@ -282,6 +288,7 @@ export const UmamiStyled = createGlobalStyle`
 export const StyledPageLayout = styled.div`
     padding: 0 60px;
     width: 100%;
+    box-sizing: border-box;
     
     @media ${device.tablet} {
         padding: 0;
@@ -294,6 +301,17 @@ export const StyledScheduledButton = styled.div`
     align-items: center;
     width: 100%;
     margin: 180px 0;
+
+    @media ${device.laptop} {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+        margin: 50px 0;
+
+        img {
+            display: none;
+        }
+    }
     
     @media ${device.tablet} {
         flex-direction: column;
@@ -314,7 +332,7 @@ export const StyledScheduledButton = styled.div`
         text-align: center;
         margin-left: 338px;
 
-        @media ${device.tablet} {
+        @media ${device.laptop} {
             margin: 0;
         }
     }
