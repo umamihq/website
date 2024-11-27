@@ -95,7 +95,7 @@ const MainLayout = () => {
                 window.removeEventListener('scroll', handleScroll);
             };
         }
-    }, []);
+    }, [location.pathname]);
 
     const logoImage = isScrolled ? '/umami_white_logo.svg' : '/umami.svg'
 
