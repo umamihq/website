@@ -718,7 +718,7 @@ object-assign
     display: flex;
 `;const xy=le.div`
     display: flex;
-    gap: 24px;
+    gap: 32px;
     
     @media ${O.tablet} {
         display: none;
@@ -728,6 +728,7 @@ object-assign
     a {
         position: relative;
         text-decoration: none;
+        font-size: 24px;
     }
 
     a:hover::before {
