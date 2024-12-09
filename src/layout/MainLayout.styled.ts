@@ -56,7 +56,7 @@ export const StyledFooter = styled.footer`
 
 export const StyledNavigation = styled.div<{ isScrolled: boolean }>`
     display: flex;
-    gap: 24px;
+    gap: 32px;
     
     @media ${device.tablet} {
         display: none;
@@ -66,6 +66,7 @@ export const StyledNavigation = styled.div<{ isScrolled: boolean }>`
     a {
         position: relative;
         text-decoration: none;
+        font-size: 24px;
     }
 
     a:hover::before {
